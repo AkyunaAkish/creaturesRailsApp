@@ -1,0 +1,72 @@
+<div class="headerDiv clearfix">
+
+  <h1 class="headerH1">Myths of the World</h1>
+</div>
+
+<div class="mainPageDiv">
+
+  <button class="mythButton">
+    <%= link_to 'Home', creatures_path %>
+  </button>
+  <p>
+    <strong>Name:</strong>
+    <%= @creature.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @creature.description %>
+  </p>
+
+  <p>
+    <strong>Image:</strong><br>
+    <img class="homeImages"src="<%= @creature.image %>" alt="" />
+  </p>
+
+
+  <h2>Add a comment:</h2>
+  <%= form_for([@creature, @creature.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+  <%= f.submit %>
+</p>
+<% end %>
+
+
+
+<h2>Comments <span class="fa fa-comment"></span> <%=  @creature.comments.size - 1 %></h2>
+
+
+<% @creature.comments.each do |comment| %>
+<% if comment.id %>
+
+
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+
+<%= link_to 'Edit', edit_creature_comment_path(@creature, comment) %>
+<% end %>
+
+<% if comment.id %>
+<%= link_to 'Destroy', creature_comment_path(@creature, comment),
+method: :delete,
+data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+
+<% end %>
+</div>

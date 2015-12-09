@@ -1,0 +1,220 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+img, embed, object, video{
+  max-width: 100%;
+  height: auto;
+}
+body{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  width: 100%;
+  background: rgb(48,132,226);
+
+}
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.homeImages{
+  width: 300px;
+  height: 300px;
+}
+a{
+  color: blue;
+  text-decoration:underline;
+}
+a:visited {
+  text-decoration:none;
+}
+
+a:hover {
+  color: black;
+  text-decoration:none;
+}
+
+.headerDiv{
+  background: rgb(52,88,120);
+  width: 100%;
+  height:55px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.headerH1{
+  font-family: cursive;
+  padding-bottom: 14px;
+}
+
+.mainPageDiv{
+  padding-top:5vw;
+  display:table;
+  margin-bottom: 5vw;
+}
+
+.createButton{
+  margin-top: 2vw;
+  margin-left: 35.5vw;
+  background: rgb(58,89,118);
+  border: none;
+}
+
+.createButton a:hover{
+  color: rgb(63,138,223);
+}
+.createButton a{
+  text-decoration: none;
+  color: white;
+}
+.mythPTag{
+  color: white;
+  font-family: cursive;
+  font-size: 1.5em;
+}
+.mythButton{
+  background: rgb(58,89,118);
+  border: none;
+}
+.mythButton a{
+  text-decoration: none;
+  color: white;
+}
+.mythButton a:hover{
+  color: rgb(63,138,223);
+}
+
+input{
+  
+}
+
+
+/* @media screen and (min-width: 100px) and (max-width: 1000px) {
+body {
+background-color: lightgreen;
+}
+.mainPageDiv{
+padding-top:10vw;
+}
+} */
+
+/* @media screen and (min-width: 60px) and (max-width: 1000px) {
+body {
+background-color: lightgreen;
+}
+.mainPageDiv{
+padding-top:10vw;
+}
+} */
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  /* STYLES GO HERE */
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+  /* STYLES GO HERE */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+  /* STYLES GO HERE */
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  /* STYLES GO HERE */
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  /* STYLES GO HERE */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  /* STYLES GO HERE */
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+  /* STYLES GO HERE */
+
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+  /* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait &amp; landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  /* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (landscape)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+  /* STYLES GO HERE */
+
+}
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+  /* STYLES GO HERE */
+
+}

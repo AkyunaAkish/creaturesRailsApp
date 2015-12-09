@@ -1,0 +1,48 @@
+<div class="headerDiv clearfix">
+
+  <h1 class="headerH1">Myths of the World</h1>
+</div>
+
+<div class="container">
+  <div class="row row-centered">
+    <div class="col-xs-12 col-centered"><div class="item"><div class="content">
+
+      <button class="createButton"><%= link_to "Add New Myth", new_creature_path %></button>
+
+    </div></div></div>
+
+  </div>
+</div>
+
+<div class="container mainPageDiv">
+  <div class="row row-centered">
+
+    <% @creatures.each do |creature| %>
+    <div class="col-xs-4 col-centered"><div class="item"><div class="content">
+
+      <p class="mythPTag">
+        <%=creature.name %>
+      </p>
+
+      <p>
+        <img class="homeImages"src="<%= creature.image %>" alt="" />
+      </p>
+      <button class="mythButton">
+        <%= link_to 'Show', creature_path(creature) %>
+      </button>
+      <button class="mythButton">
+      <%= link_to 'Edit', edit_creature_path(creature) %>
+      </button>
+      <button class="mythButton">
+      <%= link_to 'Destroy', creature_path(creature),
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+      </button>
+
+
+
+  </div></div></div>
+
+  <% end %>
+</div>
+</div>
