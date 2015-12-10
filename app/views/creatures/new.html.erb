@@ -1,12 +1,16 @@
 <div class="headerDiv clearfix">
 
-  <h1 class="headerH1">Myths of the World</h1>
+  <h1 class="headerH1">Mythical Creatures</h1>
 </div>
 
 <div class="mainPageDiv mythFormDiv">
 
-<%= link_to 'Home', creatures_path %>
-<%= form_for :creature, url: creatures_path do |f| %>
+  <button class="mythButton">
+    <%= link_to 'Home', creatures_path %>
+  </button>
+
+  <h1 class="mythPTag">Add Creature</h1>
+  <%= form_for :creature, url: creatures_path do |f| %>
 
   <% if @creature.errors.any? %>
   <div id="error_explanation">
@@ -29,16 +33,16 @@
 
   <p>
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description, class: 'descriptionTextArea' %>
   </p>
 
   <p>
-    <%= f.label :image %><br>
+    <%= f.label :image, "Image URL" %><br>
     <%= f.text_field :image %>
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit "Submit Creature",  class: 'mythSubmit' %>
   </p>
   <% end %>
 </div>

@@ -25,6 +25,7 @@ body{
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   width: 100%;
   background: rgb(48,132,226);
+  color: rgb(58,89,118);
 
 }
 .clearfix:before, .clearfix:after {
@@ -117,12 +118,24 @@ a:hover {
 
 .mythFormDiv{
   margin: 0 auto;
-  margin-top: 7vw;
+  margin-top: 1vw;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-bottom: 2vw;
   border-radius: 5vw;
 }
+
+.showPageDiv{
+  margin: 0 auto;
+}
+
+.descriptionTextArea{
+  height: 200px;
+  resize: none;
+}
+
+
+
 /* @media screen and (min-width: 100px) and (max-width: 1000px) {
 body {
 background-color: lightgreen;

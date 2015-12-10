@@ -1,9 +1,9 @@
 <div class="headerDiv clearfix">
 
-  <h1 class="headerH1">Myths of the World</h1>
+  <h1 class="headerH1">Mythical Creatures</h1>
 </div>
 
-<div class="mainPageDiv">
+<div class="mainPageDiv showPageDiv">
 
   <button class="mythButton">
     <%= link_to 'Home', creatures_path %>
@@ -74,15 +74,22 @@
     <%= comment.body %>
   </p>
 
-  <%= link_to 'Edit', edit_creature_comment_path(@creature, comment) %>
+  <button class="mythButton">
+    <%= link_to 'Edit', edit_creature_comment_path(@creature, comment) %>
+  </button>&nbsp;
+
   <% end %>
+
 
   <% if comment.id %>
-  <%= link_to 'Destroy', creature_comment_path(@creature, comment),
-  method: :delete,
-  data: { confirm: 'Are you sure?' } %>
+  <button class="mythButton">
+    <%= link_to 'Destroy', creature_comment_path(@creature, comment),
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+  </button>
+
   <% end %>
 
 
   <% end %>
-</div>
+</div><br>
