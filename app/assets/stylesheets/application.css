@@ -106,11 +106,23 @@ a:hover {
   color: rgb(63,138,223);
 }
 
-input{
-  
+.mythSubmit{
+  color: white;
+  background:rgb(58,89,118);
+  border: none;
+}
+.mythSubmit:hover{
+  color: rgb(63,138,223);
 }
 
-
+.mythFormDiv{
+  margin: 0 auto;
+  margin-top: 7vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 2vw;
+  border-radius: 5vw;
+}
 /* @media screen and (min-width: 100px) and (max-width: 1000px) {
 body {
 background-color: lightgreen;

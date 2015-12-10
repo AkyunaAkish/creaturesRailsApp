@@ -26,6 +26,22 @@
 
   <h2>Add a comment:</h2>
   <%= form_for([@creature, @creature.comments.build]) do |f| %>
+  <% if @creature.errors.any? %>
+
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@creature.errors.count, "error") %> prohibited
+      this creature from being saved:
+    </h2>
+    <ul>
+      <% @creature.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+
   <p>
     <%= f.label :commenter %><br>
     <%= f.text_field :commenter %>
@@ -35,38 +51,38 @@
     <%= f.text_area :body %>
   </p>
   <p>
-  <%= f.submit %>
-</p>
-<% end %>
+    <%= f.submit  class: 'mythSubmit'%>
+  </p>
+  <% end %>
 
 
 
-<h2>Comments <span class="fa fa-comment"></span> <%=  @creature.comments.size - 1 %></h2>
+  <h2>Comments <span class="fa fa-comment"></span> <%=  @creature.comments.size - 1 %></h2>
 
 
-<% @creature.comments.each do |comment| %>
-<% if comment.id %>
+  <% @creature.comments.each do |comment| %>
+  <% if comment.id %>
 
 
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
 
-<%= link_to 'Edit', edit_creature_comment_path(@creature, comment) %>
-<% end %>
+  <%= link_to 'Edit', edit_creature_comment_path(@creature, comment) %>
+  <% end %>
 
-<% if comment.id %>
-<%= link_to 'Destroy', creature_comment_path(@creature, comment),
-method: :delete,
-data: { confirm: 'Are you sure?' } %>
-<% end %>
+  <% if comment.id %>
+  <%= link_to 'Destroy', creature_comment_path(@creature, comment),
+  method: :delete,
+  data: { confirm: 'Are you sure?' } %>
+  <% end %>
 
 
-<% end %>
+  <% end %>
 </div>

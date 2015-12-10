@@ -2,10 +2,13 @@
 
   <h1 class="headerH1">Myths of the World</h1>
 </div>
+<div class="mainPageDiv mythFormDiv">
 
-<div class="mainPageDiv">
+  <button class="mythButton">
+    <%= link_to 'Home', creatures_path %>
+  </button>
 
-  <h1>Editing Creature</h1>
+  <h1 class="mythPTag">Edit Myth</h1>
 
   <%= form_for :creature, url: creature_path(@creature), method: :patch do |f| %>
 
@@ -16,7 +19,7 @@
       this creature from being saved:
     </h2>
     <ul>
-      <% @article.errors.full_messages.each do |msg| %>
+      <% @creature.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
       <% end %>
     </ul>
@@ -39,10 +42,10 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit "Submit Changes",  class: 'mythSubmit'%>
   </p>
 
   <% end %>
 
-  <%= link_to 'Home', creatures_path %>
+
 </div>
