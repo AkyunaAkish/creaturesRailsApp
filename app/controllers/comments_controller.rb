@@ -1,20 +1,20 @@
 class CommentsController < ApplicationController
-  def index
-    @creature = Creature.find(params[:creature_id])
-    redirect_to(@creature)
-  end
+  # def index
+  #   @creature = Creature.find(params[:creature_id])
+  #   redirect_to(@creature)
+  # end
 
   def create
     @creature = Creature.find(params[:creature_id])
     @comment = @creature.comments.create(comment_params)
 
-    if !@comment.errors.messages.empty?
-      @creature.errors.add(:body, @comment.errors.messages[:body])
-      @creature.errors.add(:commenter, @comment.errors.messages[:commenter])
-      render 'creatures/show'
-    else
+    # if !@comment.errors.messages.empty?
+    #   @creature.errors.add(:body, @comment.errors.messages[:body])
+    #   @creature.errors.add(:commenter, @comment.errors.messages[:commenter])
+    #   render 'creatures/show'
+    # else
       redirect_to creature_path(@creature)
-    end
+    # end
   end
 
   def edit

@@ -134,6 +134,11 @@ a:hover {
   resize: none;
 }
 
+.iframeVideo{
+  width:100%;
+  z-index: 1;
+
+}
 
 
 /* @media screen and (min-width: 100px) and (max-width: 1000px) {
