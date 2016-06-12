@@ -1,5 +1,3 @@
-== README
-
 # Ruby on Rails application - Akyuna Akish
 
 ## Built with RoR, postgreSQL and ERB
