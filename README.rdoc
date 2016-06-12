@@ -6,4 +6,4 @@
 
 ### Live Site:
 
-[http://mythical-creatures.herokuapp.com/]('http://mythical-creatures.herokuapp.com/')
+[http://mythical-creatures.herokuapp.com/](http://mythical-creatures.herokuapp.com/)
